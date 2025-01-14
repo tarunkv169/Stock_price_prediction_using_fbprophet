@@ -18,48 +18,48 @@ The objective of this project is to:
 ## **Methodology**
 <img src="https://user-images.githubusercontent.com/7460892/207003643-e03c8964-3f16-4a62-9a2d-b1eec5d8691f.png" width="80%" height="80%">
 
-### 1. Importing Necessary Libraries
+### **1. Importing Necessary Libraries**
 - Imported libraries: `pandas`, `fbprophet`, and `plotly.express`.
 - Initialized `plotly.io` for visualizations.
 
-### 2. Importing Dataset from Yahoo Finance
+### **2. Importing Dataset from Yahoo Finance**
 - Downloaded Tesla stock price dataset from Yahoo Finance.
 - Imported the dataset using `pandas`.
 - Used `.info()` and `.describe()` to explore the dataset.
 
-### 3. Data Visualization using Plotly
+### **3. Data Visualization using Plotly**
 - Created various visualizations:
 - 
   - Area chart of `Close` prices: `px.area(df, x="date", y="Close")`
-  - ![newplot](https://github.com/user-attachments/assets/d959b5b3-b5f9-48d7-9222-0a83df56ed7b)
+  - <img src="https://github.com/user-attachments/assets/d959b5b3-b5f9-48d7-9222-0a83df56ed7b" width="80%" height="80%">
 
   - Box plot of `Close`: `px.box(df, y="Close")`
-    ![newplot (3)](https://github.com/user-attachments/assets/17c0a220-4490-413a-bfe3-42ca96b31ccb)
+    <img src="https://github.com/user-attachments/assets/17c0a220-4490-413a-bfe3-42ca96b31ccb" width="80%" height="80%">
 
 
 
-### 4. Data Preparation and Preprocessing
+### **4. Data Preparation and Preprocessing**
 - Selected relevant columns: `date` and `Close`.
 - Created a new DataFrame: `columns = ["date", "Close"]` and initialized it.
 - Renamed columns for FBProphet:
   - Converted `date` to `ds`.
   - Converted `Close` to `y`.
 
-### 5. Training the Model
+### **5. Training the Model**
 - Initialized the FBProphet model: `m = Prophet()`.
 - Trained the model with the prepared DataFrame: `m.fit(prophet_df)`.
 
-### 6. Prediction and Forecasting
+### **6. Prediction and Forecasting**
 - Created a future DataFrame for 30 days: `future = m.make_future_dataframe(periods=30)`.
 - Predicted stock prices: `forecast = m.predict(future)`.
 - Visualized predictions:
   - plotting chart: `fig=m.plot(forecast,xlabel="ds",ylabel="y")`
-    ![Screenshot 2025-01-14 151125](https://github.com/user-attachments/assets/98e9daf4-ef77-411d-8640-3149bfd842c8)
+    <img src="https://github.com/user-attachments/assets/98e9daf4-ef77-411d-8640-3149bfd842c8" width="80%" height="80%">
   - Trend and components: `fig = m.plot_components(forecast)`.
-    ![Screenshot 2025-01-14 151148](https://github.com/user-attachments/assets/3ff0913f-0e89-4d69-839c-8c8cc87fbc6c)
+    <img src="https://github.com/user-attachments/assets/3ff0913f-0e89-4d69-839c-8c8cc87fbc6c" width="80%" height="80%">
 
 
-### 7. Forecast Evaluation Using Google Finance
+### **7. Forecast Evaluation Using Google Finance**
 - Exported forecasted data:
   ```python
   forecast.to_csv('forecast.csv')
@@ -75,11 +75,8 @@ The objective of this project is to:
 - Conducted evaluation and documented observations.
 
 ---
-
-
 ## **4. Live link**
 Link: https://colab.research.google.com/github/tarunkv169/Stock_price_prediction_using_fbprophet/blob/main/Stock_price_prediction_using_fbprophet.ipynb
-
 
 ## Future Scope
 - Incorporate additional features like trading volume and economic indicators.
