@@ -18,16 +18,16 @@ The objective of this project is to:
 ## **Methodology**
 <img src="https://user-images.githubusercontent.com/7460892/207003643-e03c8964-3f16-4a62-9a2d-b1eec5d8691f.png" width="80%" height="80%">
 
-### **1. Importing Necessary Libraries**
+### **1️⃣ Importing Necessary Libraries**
 - Imported libraries: `pandas`, `fbprophet`, and `plotly.express`.
 - Initialized `plotly.io` for visualizations.
 
-### **2. Importing Dataset from Yahoo Finance**
+### **2️⃣ Importing Dataset from Yahoo Finance**
 - Downloaded Tesla stock price dataset from Yahoo Finance.
 - Imported the dataset using `pandas`.
 - Used `.info()` and `.describe()` to explore the dataset.
 
-### **3. Data Visualization using Plotly**
+### **3️⃣ Data Visualization using Plotly**
 - Created various visualizations:
 - 
   - Area chart of `Close` prices: `px.area(df, x="date", y="Close")`
@@ -38,18 +38,18 @@ The objective of this project is to:
 
 
 
-### **4. Data Preparation and Preprocessing**
+### **4️⃣ Data Preparation and Preprocessing**
 - Selected relevant columns: `date` and `Close`.
 - Created a new DataFrame: `columns = ["date", "Close"]` and initialized it.
 - Renamed columns for FBProphet:
   - Converted `date` to `ds`.
   - Converted `Close` to `y`.
 
-### **5. Training the Model**
+### **5️⃣ Training the Model**
 - Initialized the FBProphet model: `m = Prophet()`.
 - Trained the model with the prepared DataFrame: `m.fit(prophet_df)`.
 
-### **6. Prediction and Forecasting**
+### **6️⃣ Prediction and Forecasting**
 - Created a future DataFrame for 30 days: `future = m.make_future_dataframe(periods=30)`.
 - Predicted stock prices: `forecast = m.predict(future)`.
 - Visualized predictions:
@@ -59,7 +59,7 @@ The objective of this project is to:
     <img src="https://github.com/user-attachments/assets/3ff0913f-0e89-4d69-839c-8c8cc87fbc6c" width="70%" height="60%">
 
 
-### **7. Forecast Evaluation Using Google Finance**
+### **7️⃣ Forecast Evaluation Using Google Finance**
 - Exported forecasted data:
   ```python
   forecast.to_csv('forecast.csv')
@@ -75,7 +75,7 @@ The objective of this project is to:
 - Conducted evaluation and documented observations.
 
 ---
-## **4. Live link**
+## **🚗🚕 Live link**
 Link: https://colab.research.google.com/github/tarunkv169/Stock_price_prediction_using_fbprophet/blob/main/Stock_price_prediction_using_fbprophet.ipynb
 
 ## Future Scope
