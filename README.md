@@ -31,10 +31,10 @@ The objective of this project is to:
 - Created various visualizations:
 - 
   - Area chart of `Close` prices: `px.area(df, x="date", y="Close")`
-  - <img src="https://github.com/user-attachments/assets/d959b5b3-b5f9-48d7-9222-0a83df56ed7b" width="50%" height="50%">
+  - <img src="https://github.com/user-attachments/assets/d959b5b3-b5f9-48d7-9222-0a83df56ed7b" width="70%" height="60%">
 
   - Box plot of `Close`: `px.box(df, y="Close")`
-    <img src="https://github.com/user-attachments/assets/17c0a220-4490-413a-bfe3-42ca96b31ccb" width="50%" height="50%">
+    <img src="https://github.com/user-attachments/assets/17c0a220-4490-413a-bfe3-42ca96b31ccb" width="70%" height="60%">
 
 
 
@@ -54,9 +54,9 @@ The objective of this project is to:
 - Predicted stock prices: `forecast = m.predict(future)`.
 - Visualized predictions:
   - plotting chart: `fig=m.plot(forecast,xlabel="ds",ylabel="y")`
-    <img src="https://github.com/user-attachments/assets/98e9daf4-ef77-411d-8640-3149bfd842c8" width="50%" height="50%">
+    <img src="https://github.com/user-attachments/assets/98e9daf4-ef77-411d-8640-3149bfd842c8" width="70%" height="60%">
   - Trend and components: `fig = m.plot_components(forecast)`.
-    <img src="https://github.com/user-attachments/assets/3ff0913f-0e89-4d69-839c-8c8cc87fbc6c" width="50%" height="50%">
+    <img src="https://github.com/user-attachments/assets/3ff0913f-0e89-4d69-839c-8c8cc87fbc6c" width="70%" height="60%">
 
 
 ### **7. Forecast Evaluation Using Google Finance**
